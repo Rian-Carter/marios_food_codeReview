@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-
   def index
     @products = Product.all
     if params[:sort] == "recent"
@@ -13,6 +12,11 @@ class ProductsController < ApplicationController
     end
   end
 
+  def show
+    @product = Product.find(params[:id])
+    @reviews = @product.reviews
+  end
+
   def new
     @product = Product.new
   end
@@ -20,10 +24,10 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      flash[:notice] = "Product added."
+      flash[:notice] = "Product successfully added!"
       redirect_to products_path
     else
-      flash[:notice] = "Product not added."
+      flash[:notice] = "Your product was not added."
       render :new
     end
   end
@@ -32,18 +36,13 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
-  def show
-    @product = Product.find(params[:id])
-    @reviews = @product.reviews
-  end
-
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
-      flash[:notice] = "Product updated."
+      flash[:notice] = "Product successfully updated!"
       redirect_to products_path
     else
-      flash[:notice] = "Product not updated."
+      flash[:notice] = "Your product was not updated."
       render :edit
     end
   end
