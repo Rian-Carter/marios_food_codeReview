@@ -12,7 +12,7 @@ describe "add a review process" do
     expect(page).to have_content 'Brie'
   end
 
-  it "returns an error if left blank" do
+  it "returns an error if form left blank" do
     product = Product.create(:name => 'Brie', :cost => '3.95', :origin => 'France')
     visit new_product_review_path(product)
     click_on 'Create Review'
