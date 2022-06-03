@@ -1,13 +1,14 @@
-class ProductsController < ApplicationController
+class ReviewsController < ApplicationController
 
   def show
-    @reivew = Review.find(params[:id])
+    @review = Review.find(params[:id])
     @product = @review.product
   end
 
   def new
     @product = Product.find(params[:product_id])
     @review = @product.reviews.new
+    render :new
   end
 
   def create
