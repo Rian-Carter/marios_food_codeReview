@@ -31,4 +31,11 @@ class Product < ApplicationRecord
     "Spain",
     "Turkey"
   ]
+
+  before_save(:titleize_product)
+
+  private
+    def titleize_product
+      self.name = self.name.titleize_product
+    end
 end
