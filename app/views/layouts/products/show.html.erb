@@ -1,0 +1,21 @@
+<% content_for(:title, "Mario's | Product") %>
+
+<h1>Product: <%= @product.name %></h1>
+<h3>Cost: <%= @product.cost %></h3>
+<h3>Origin: <%= @product.origin %></h3>
+
+<ul>
+  <% if @reviews.any? %>
+    <% @reviews.each do |review| %>
+      <li>Reviewed by: <%= link_to review.author, product_review_path(@product, review) %></li>
+    <% end %>
+    <% else %>
+      <h2>There are no reviews for this product.</h2>
+    <% end %>
+</ul>
+
+<button class="btn btn-success"><%= link_to "Edit Product", edit_product_path(@product) %></button>
+<button class="btn btn-success"><%= link_to "Delete Product", product_path(@product),
+                  :data => {:confirm => "Are you sure?",
+                  :method => "delete"} %></button>
+<button class="btn btn-success"><%= link_to "Write a Review", new_product_review_path(@product.id) %></button>
