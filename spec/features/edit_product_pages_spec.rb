@@ -16,4 +16,11 @@ describe "edit product process" do
     click_button 'Update Product'
     expect(page).to have_content 'errors'
   end
+
+  it "delete a product" do
+    product = Product.create(:name => 'Brie', :cost => '3.95', :origin => 'France')
+    visit product_path(product)
+    click_button 'Delete Product'
+    expect(page).not_to have_content 'Cheese'
+  end
 end
