@@ -7,7 +7,7 @@ describe "add a review process" do
     click_link 'Write a Review'
     fill_in 'Author', :with => "Sally"
     fill_in 'Content body', :with => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    fill_in 'review_rating', :with => 3
+    fill_in 'Rating', :with => 3
     click_on 'Create Review'
     expect(page).to have_content 'Brie'
   end
