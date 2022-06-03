@@ -45,6 +45,7 @@ class AlbumsController < ApplicationController
     else
       flash[:notice] = "Product not updated."
       render :edit
+    end
   end
 
   def destroy
@@ -53,7 +54,7 @@ class AlbumsController < ApplicationController
     redirect_to products_path
   end
 
-  private
+private
   def product_params
     params.require(:product).permit(:name, :cost, :origin)
   end
