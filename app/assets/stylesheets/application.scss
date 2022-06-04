@@ -14,17 +14,108 @@
  *= require_self
  */
 
-// @import "bootstrap-sprockets";
-// @import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
-// a:link {
-//   color: black;
-// }
+a:link {
+  color: black;
+}
 
-// a:visited {
-//   color: green;
-// }
+a:visited {
+  color: black;
+}
 
-// .navbar {
-// color: black;
-// }
+.container {
+  color: black;
+}
+
+.plist {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.about {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  color: black;
+}
+
+.writeReview {
+  font-family:'Courier New', Courier, monospace;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+  color: black;
+}
+
+hr {
+  border-top: 1px dashed #35ACA6;
+}
+
+body {
+  background-color: #21424E
+}
+
+.btn {
+  border-radius: 10px;
+  background-color: #35ACA6;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 0px;
+  width: 165px;
+  transition: all 1.5s;
+  cursor: pointer;
+  margin: 5px;
+  box-shadow: 5px 8px black;
+}
+
+.btn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+h3 {
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 960px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.headerImage {
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}

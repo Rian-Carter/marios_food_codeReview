@@ -1,10 +1,10 @@
 <% content_for(:title, "Mario's | Reviews") %>
 
-<h1>Author: <%= @review.author %></h1>
-<h1>Review: <%= @review.content_body %></h1>
-<h1>Rating: <%= @review.rating %></h1>
+  <h1>Author: <%= @review.author %></h1>
+  <h1>Review: <%= @review.content_body %></h1>
+  <h1>Rating: <%= @review.rating %></h1>
 
-<p><%= link_to "Edit Review", edit_product_review_path(@product, @review) %></p>
-<p><%= link_to "Delete Review", product_review_path(@review),
-                  :data => {:confirm => "Are you sure?",
-                  :method => "delete"} %></P>
+  <p><%= link_to "Edit Review", edit_product_review_path(@product, @review) %></p>
+  <p><%= link_to "Delete Review", product_review_path(@review),
+                    :data => {:confirm => "Are you sure?",
+                    :method => "delete"} %></P>
