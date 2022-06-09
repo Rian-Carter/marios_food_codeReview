@@ -1,0 +1,30 @@
+<% content_for(:title, "Mario's Foods") %>
+
+<div class="about">
+  <h3>|About Mario's Foods|</h3>
+    <p>Mario's has been offering consumers with high-quality food at reasonable pricing since 2000. We place a high value on customer happiness. That is why we have made it simple to write a product review and have posted all of them on our website. Share your experience.</p><br><br><hr>
+
+  <div class="wrapper">
+    <a href="?sort=recent"><button class="btn btn-default">Recently added</button></a>
+    <a href="?sort=most_reviews"><button class="btn btn-default">Most Reviews</button></a>
+    <a href="?sort=usa"><button class="btn btn-default">Made in USA</button></a>
+    <button class="btn btn-default"><%= link_to "All Products", products_path %></button>
+  </div>
+
+  <hr>
+  <br>
+  <h1>Products</h1>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+</div>
+<hr>
+
+<footer>
+  <div class="headerImage">
+    <h4>Contact Info: | t: 123.456.7890 | e: marioandluigi@goodfoods.com</h4>
+    <%= image_tag "treatyoself.png" %>
+  </div>
+</footer>
