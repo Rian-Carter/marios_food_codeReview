@@ -22,12 +22,13 @@ _Run the following commands in the Terminal:_
 1. `$ git clone` [this repository](https://github.com/Rian-Carter/marios_food_codeReview.git)
 2. `$ cd marios_food_code_review`
 3. `$ bundle install`
-4. `$ rake db:create`
-5. `$ rake db:test:prepare`
-6. `$ rake db:migrate`
-7. `$ rake db:seed`
-8. `$ pg_ctl start` _to start up a psql server_
-9. `$ rails s` _to start up a rails server, then navigate to localhost:3000 in your browser._
+4. `$ pg_ctl start` _to start up a psql server_
+5. `$ rake db:create`
+6. `$ rake db:test:prepare`
+7. `$ rake db:migrate`
+8. `$ rake db:seed`
+9. `$ rspec` _to see passing tests._
+10. `$ rails s` _to start up a rails server, then navigate to localhost:3000 in your browser._
 
 ## Known Bugs
 
