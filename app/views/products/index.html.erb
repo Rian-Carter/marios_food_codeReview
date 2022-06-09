@@ -5,10 +5,7 @@
     <p>Mario's has been offering consumers with high-quality food at reasonable pricing since 2000. We place a high value on customer happiness. That is why we have made it simple to write a product review and have posted all of them on our website. Share your experience.</p><br><br><hr>
 
   <div class="wrapper">
-    <a href="?sort=recent"><button class="btn btn-default">Recently added</button></a>
-    <a href="?sort=most_reviews"><button class="btn btn-default">Most Reviews</button></a>
-    <a href="?sort=usa"><button class="btn btn-default">Made in USA</button></a>
-    <button class="btn btn-default"><%= link_to "All Products", root_path %></button>
+    <button class="btn btn-default"><%= link_to "Home", root_path %></button>
     <button class="btn btn-default"><%= link_to "New Product", new_product_path %></button>
   </div>
 
@@ -21,11 +18,3 @@
     <% end %>
   </ul>
 </div>
-<hr>
-
- <footer>
-  <div class="headerImage">
-    <h4>Contact Info: | t: 123.456.7890 | e: marioandluigi@goodfoods.com</h4>
-    <%= image_tag "treatyoself.png" %>
-  </div>
-</footer>
