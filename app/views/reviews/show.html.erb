@@ -1,8 +1,10 @@
 <% content_for(:title, "Mario's | Reviews") %>
 
+<div class="about">
   <h1>Author: <%= @review.author %></h1>
   <h1>Review: <%= @review.content_body %></h1>
   <h1>Rating: <%= @review.rating %></h1>
+  </div>
 
   <% if current_user && current_user.admin %>
     <p><%= link_to "Edit Review", edit_product_review_path(@product, @review) %></p>
