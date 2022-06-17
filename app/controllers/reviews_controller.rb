@@ -1,4 +1,9 @@
 class ReviewsController < ApplicationController
+  before_action :authenticate_user!, :only => [:new]
+  before_action :only => [:edit, :update, :destroy] do
+    redirect_to new_user_session_path unless current_user && current_user.admin
+  end
+  
   def show
     @review = Review.find(params[:id])
     @product = @review.product
