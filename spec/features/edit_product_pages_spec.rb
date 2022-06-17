@@ -1,6 +1,17 @@
 require 'rails_helper'
 
 describe "edit product process" do
+  before(:each) do
+    visit new_product_path
+    click_link 'Sign-Up'
+    fill_in 'user_email', with: 'useremail@gmail.com'
+    fill_in 'user_password', with: 'password'
+    fill_in 'user_password_confirmation', with: 'password'
+    click_button 'Sign up'
+    @user = User.last
+    @user.update(admin: true)
+  end
+
   it "edits a product" do
     product = Product.create(:name => 'Brie', :cost => '3.95', :origin => "France")
     visit edit_product_path(product)
