@@ -10,14 +10,28 @@
   </head>
 
   <body>
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
 
     <header class="container">
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-            <h1><%= link_to "Mario's Specialty Food Products", root_path %></h1>
+            <%= flash[:alert] %>
+            <%= flash[:notice] %>
+            <h1>Mario's Specialty Food Products</h1>
+            <ul>
+              <% if user_signed_in? %>
+                <b><div>Signed in as: <%= current_user.email.split('@')[0].capitalize %></div></b>
+              <% end %>
+              <% if current_user %>
+                <h6><%= link_to "Edit Account", edit_user_registration_path %></h6>
+                <h6><%= link_to 'Logout', destroy_user_session_path, method: :delete %></h6>
+              <% else %>
+                <h6><%= link_to "Sign-In", new_user_session_path%></h6>
+                <h6><%= link_to "Sign-Up", new_user_registration_path%></h6>
+              <% end %>
+              <h6><%= link_to "Home", root_path %></h6>
+              <%# <div class='alert alert-info alert-dismissible fade show' role='alert'> %>
+            </ul>
           </div>
         </div>
       </nav>
