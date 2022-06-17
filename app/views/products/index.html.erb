@@ -6,7 +6,9 @@
 
   <div class="wrapper">
     <button class="btn btn-default"><%= link_to "Home", root_path %></button>
+    <% if current_user && current_user.admin %>
     <button class="btn btn-default"><%= link_to "New Product", new_product_path %></button>
+    <% end %>
   </div>
 
   <hr>
