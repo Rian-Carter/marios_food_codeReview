@@ -7,8 +7,8 @@
   </div>
 
   <% if current_user && current_user.admin %>
-    <button class="btn btn-success"><%= link_to "Edit Review", edit_product_review_path(@product, @review) %></button>
-    <button class="btn btn-success"><%= link_to "Delete Review", product_review_path(@review),
+    <%= link_to "Edit Review", edit_product_review_path(@product, @review) %> |
+    <%= link_to "Delete Review", product_review_path(@review),
                       :data => {:confirm => "Are you sure?",
-                      :method => "delete"} %></button>
+                      :method => "delete"} %>
   <% end %>
