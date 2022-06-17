@@ -19,7 +19,7 @@
     <button class="btn btn-success"><%= link_to "Delete Product", product_path(@product),
                   :data => {:confirm => "Are you sure?",
                   :method => "delete"} %></button>
+  <% end %>
+  <% if user_signed_in? %>
     <button class="btn btn-success"><%= link_to "Write a Review", new_product_review_path(@product.id) %></button>
-    <% else %>
-      <button class="btn btn-success"><%= link_to "Write a Review", new_product_review_path(@product.id) %></button>
   <% end %>
