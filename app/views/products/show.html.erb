@@ -1,8 +1,10 @@
 <% content_for(:title, "Mario's | Product") %>
 
-<h1>Product: <%= @product.name %></h1>
-<h3>Cost: $<%= @product.cost %></h3>
-<h3>Origin: <%= @product.origin %></h3>
+<div class="cancel">
+  <h1>Product: <%= @product.name %></h1>
+  <h3>Cost: $<%= @product.cost %></h3>
+  <h3>Origin: <%= @product.origin %></h3>
+</div><br><br><br><br><br><br><br><br><br>
 
 <ul>
   <% if @reviews.any? %>
@@ -12,14 +14,16 @@
     <% else %>
       <h2>There are no reviews for this product.</h2>
     <% end %>
-</ul>
+</ul><br><br>
 
   <% if current_user && current_user.admin %>
+  <div class="wrapper">
     <button class="btn btn-success"><%= link_to "Edit Product", edit_product_path(@product) %></button>
     <button class="btn btn-success"><%= link_to "Delete Product", product_path(@product),
                   :data => {:confirm => "Are you sure?",
                   :method => "delete"} %></button>
-  <% end %>
-  <% if user_signed_in? %>
-    <button class="btn btn-success"><%= link_to "Write a Review", new_product_review_path(@product.id) %></button>
-  <% end %>
+    <% end %>
+    <% if user_signed_in? %>
+      <button class="btn btn-success"><%= link_to "Write a Review", new_product_review_path(@product.id) %></button>
+    <% end %>
+  </div>
