@@ -14,8 +14,12 @@
     <% end %>
 </ul>
 
-<button class="btn btn-success"><%= link_to "Edit Product", edit_product_path(@product) %></button>
-<button class="btn btn-success"><%= link_to "Delete Product", product_path(@product),
+  <% if current_user && current_user.admin %>
+    <button class="btn btn-success"><%= link_to "Edit Product", edit_product_path(@product) %></button>
+    <button class="btn btn-success"><%= link_to "Delete Product", product_path(@product),
                   :data => {:confirm => "Are you sure?",
                   :method => "delete"} %></button>
-<button class="btn btn-success"><%= link_to "Write a Review", new_product_review_path(@product.id) %></button>
+    <button class="btn btn-success"><%= link_to "Write a Review", new_product_review_path(@product.id) %></button>
+    <% else %>
+      <button class="btn btn-success"><%= link_to "Write a Review", new_product_review_path(@product.id) %></button>
+  <% end %>
