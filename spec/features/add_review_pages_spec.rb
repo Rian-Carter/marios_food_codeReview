@@ -1,6 +1,15 @@
 require 'rails_helper'
 
 describe "add a review process" do
+  before(:each) do
+    visit new_product_path
+    click_link 'Sign-Up'
+    fill_in 'user_email', with: 'useremail@gmail.com'
+    fill_in 'user_password', with: 'password'
+    fill_in 'user_password_confirmation', with: 'password'
+    click_button 'Sign up'
+  end
+
   it "adds a review" do
     product = Product.create(:name => 'Brie', :cost => '3.95', :origin => 'France')
     visit product_path(product)
