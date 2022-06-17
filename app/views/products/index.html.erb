@@ -1,5 +1,6 @@
 <% content_for(:title, "Mario's Foods") %>
 
+
 <div class="about">
   <h3>|About Mario's Foods|</h3>
     <p>Mario's has been offering consumers with high-quality food at reasonable pricing since 2000. We place a high value on customer happiness. That is why we have made it simple to write a product review and have posted all of them on our website. Share your experience.</p><br><br><hr>
@@ -19,4 +20,5 @@
       <li><%= link_to product.name, product_path(product) %></li>
     <% end %>
   </ul>
+  <%= will_paginate @products %>
 </div>
