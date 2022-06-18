@@ -4,7 +4,7 @@
   <h1>Author: <%= @review.author %></h1>
   <h1>Review: <%= @review.content_body %></h1>
   <h1>Rating: <%= @review.rating %></h1>
-  </div>
+</div>
 
   <% if current_user && current_user.admin %>
     <%= link_to "Edit Review", edit_product_review_path(@product, @review) %> |
