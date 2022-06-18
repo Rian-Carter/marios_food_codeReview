@@ -57,12 +57,12 @@ hr {
 }
 
 body {
-  background-color: rgb(182, 182, 182);
+  background-color: white;
 }
 
 .btn {
   border-radius: 10px;
-  background-color: #35ACA6;
+  background: #55ACEE;
   border: none;
   color: #FFFFFF;
   text-align: center;
@@ -166,7 +166,7 @@ h3 {
 
 .icon-bar a {
   display: block;
-  position: left;
+  // position: right;
   text-align: center;
   padding: 10px;
   transition: all 0.3s ease;
