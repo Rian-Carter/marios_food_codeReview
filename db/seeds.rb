@@ -17,7 +17,7 @@ Review.destroy_all
   5.times do
     Review.create!(
       author: Faker::FunnyName.name,
-      content_body: Faker::Lorem.paragraph_by_chars(number:50),
+      content_body: Faker::Hipster.paragraph_by_chars(characters: 250, supplemental: false),
       rating: Faker::Number.between(from: 1, to: 5),
       product_id: product.id
     )
