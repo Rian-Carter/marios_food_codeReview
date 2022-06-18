@@ -5,8 +5,8 @@ describe "add a review process" do
     visit new_product_path
     click_link 'Sign-Up'
     fill_in 'user_email', with: 'useremail@gmail.com'
-    fill_in 'user_password', with: 'password'
-    fill_in 'user_password_confirmation', with: 'password'
+    fill_in 'user_password', with: 'testPassword1'
+    fill_in 'user_password_confirmation', with: 'testPassword1'
     click_button 'Sign up'
   end
 
