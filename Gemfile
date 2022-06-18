@@ -40,7 +40,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'jquery-rails'
 gem 'faker'
 gem 'devise'
-# gem 'kaminari'
 gem 'will_paginate', '>= 3.1.1'
 
 group :development, :test do
