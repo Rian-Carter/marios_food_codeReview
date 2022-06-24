@@ -45,6 +45,7 @@ _Run the following commands in the Terminal:_
 
 #### User
 
+  ##### Credentials - email 'user@test.com' - password 'Testpassword123'
   1. A user can sign-up, sign-in, sign-out
   2. A user can view products.
   3. A user can view and add reviews to products.
@@ -55,6 +56,7 @@ _Run the following commands in the Terminal:_
 
 #### Admin
 
+  ##### Credentials - email 'admin@test.com' - password 'Testpassword123'
   1. An admin can sign-up, sign-in, sign-out.
   2. An admin can view products.
   3. An admin can view product reviews.
