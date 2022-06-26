@@ -13,7 +13,7 @@ class Product < ActiveRecord::Base
     .order("reviews_count DESC")
     .limit(1)
     )}
-  scope :usa, -> { where(origin: "United States of America") }
+  scope :usa, -> { where(origin: "United States") }
 
   COUNTRY_LIST = [
     "United States of America",
