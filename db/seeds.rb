@@ -17,7 +17,8 @@ user = User.create!(:email => 'user@test.com', :password => 'Testpassword123')
     cost: Faker::Number.decimal(l_digits: 2),
     origin: Faker::Address.country_by_code(code: 'US')
   )
-  50.times do |index|
+end
+  47.times do |index|
     product = Product.create!(
       name: Faker::Food.unique.ingredient,
       cost: Faker::Number.decimal(l_digits: 2),
